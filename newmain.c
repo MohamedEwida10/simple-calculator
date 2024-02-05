@@ -7,9 +7,7 @@
 
 #include "newmain.h"
  
-uint32 temp1 = 0;
-uint32 temp2 = 0;
-uint32 temp_result = 0;
+
 int main() { 
     Application_Initialization();
     
@@ -24,10 +22,10 @@ int main() {
                    
     get_number_and_operartion(num1,&counter_num1,&lcd_counter,&operation); //take first number and first operation 
     convert_arr_to_float( num1,counter_num1,&num1_val);
-     temp1 = num1_val;
+   
     get_number_and_operartion(num2,&counter_num2,&lcd_counter,&operation2);//take second number and second operation
     convert_arr_to_float( num2,counter_num2,&num2_val);
-    temp2 = num2_val;
+   
     
     if(operation2 == '='){}//nothing // if operation2 = '=' then we don?t need the third number and third operation
     else{
@@ -80,7 +78,7 @@ int main() {
            case '=': send_the_result_to_LCD(total_result);break; 
        }
        
-       temp_result = total_result;
+    
 
        
     }
