@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\Blu-Ray\AppData\Local\Temp\xcAsg88.\driver_tmp_3.o
+ C:\Users\Blu-Ray\AppData\Local\Temp\xcAs97c.\driver_tmp_3.o
  -Odist/default/debug\simple_calculator.debug.hex
  -logfile=dist/default/debug\simple_calculator.debug.hxl
  -addressing=1
@@ -9,19 +9,19 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\Blu-Ray\AppData\Local\Temp\xcAsg88.\driver_tmp_3.o)
-  1000h - 7AA4h		(C:\Users\Blu-Ray\AppData\Local\Temp\xcAsg88.\driver_tmp_3.o)
-  7AA6h - 7AADh		(C:\Users\Blu-Ray\AppData\Local\Temp\xcAsg88.\driver_tmp_3.o)
-  300000h - 30000Dh		(C:\Users\Blu-Ray\AppData\Local\Temp\xcAsg88.\driver_tmp_3.o)
+  0h - 3h		(C:\Users\Blu-Ray\AppData\Local\Temp\xcAs97c.\driver_tmp_3.o)
+  1000h - 7A68h		(C:\Users\Blu-Ray\AppData\Local\Temp\xcAs97c.\driver_tmp_3.o)
+  7A6Ah - 7A71h		(C:\Users\Blu-Ray\AppData\Local\Temp\xcAs97c.\driver_tmp_3.o)
+  300000h - 30000Dh		(C:\Users\Blu-Ray\AppData\Local\Temp\xcAs97c.\driver_tmp_3.o)
  Unused ranges:
   4h - FFFh
-  7AA5h - 7AA5h
-  7AAEh - 2FFFFFh
+  7A69h - 7A69h
+  7A72h - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\Blu-Ray\AppData\Local\Temp\xcAsg88.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\Blu-Ray\AppData\Local\Temp\xcAs97c.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -1729,11 +1729,8 @@
 00007A30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00007A40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00007A50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00007A60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00007A70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00007A80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00007A90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00007AA0 | H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1 H1 H1 -- --
+00007A60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1
+00007A70 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00300000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 00300010 | --

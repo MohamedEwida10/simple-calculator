@@ -572,113 +572,89 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _total_result
 -> -> 0 `i `f
 ]
-"10 newmain.c
-[; ;newmain.c: 10: uint32 temp1 = 0;
-[v _temp1 `ui ~T0 @X0 1 e ]
-[i _temp1
--> -> 0 `i `ui
-]
-"11
-[; ;newmain.c: 11: uint32 temp2 = 0;
-[v _temp2 `ui ~T0 @X0 1 e ]
-[i _temp2
--> -> 0 `i `ui
-]
-"12
-[; ;newmain.c: 12: uint32 temp_result = 0;
-[v _temp_result `ui ~T0 @X0 1 e ]
-[i _temp_result
--> -> 0 `i `ui
-]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"13
-[; ;newmain.c: 13: int main() {
+"11 newmain.c
+[; ;newmain.c: 11: int main() {
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"14
-[; ;newmain.c: 14:     Application_Initialization();
+"12
+[; ;newmain.c: 12:     Application_Initialization();
 [e ( _Application_Initialization ..  ]
-"16
-[; ;newmain.c: 16:  while(1){
+"14
+[; ;newmain.c: 14:  while(1){
 [e :U 284 ]
 {
-"18
-[; ;newmain.c: 18:     initialize_var();
+"16
+[; ;newmain.c: 16:     initialize_var();
 [e ( _initialize_var ..  ]
-"20
-[; ;newmain.c: 20:     lcd_4bit_send_command(&lcd1,0x01);
+"18
+[; ;newmain.c: 18:     lcd_4bit_send_command(&lcd1,0x01);
 [e ( _lcd_4bit_send_command (2 , -> &U _lcd1 `*CS280 -> -> 1 `i `uc ]
-"21
-[; ;newmain.c: 21:     lcd_4bit_send_string_pos(&lcd1,2,1,"calc is ready");
+"19
+[; ;newmain.c: 19:     lcd_4bit_send_string_pos(&lcd1,2,1,"calc is ready");
 [e ( _lcd_4bit_send_string_pos (4 , , , -> &U _lcd1 `*CS280 -> -> 2 `i `uc -> -> 1 `i `uc :s 1C ]
-"22
-[; ;newmain.c: 22:  _delay((unsigned long)((1000)*(8000000ul/4000.0)));
+"20
+[; ;newmain.c: 20:  _delay((unsigned long)((1000)*(8000000ul/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"23
-[; ;newmain.c: 23:  lcd_4bit_send_command(&lcd1,0x01);
+"21
+[; ;newmain.c: 21:  lcd_4bit_send_command(&lcd1,0x01);
 [e ( _lcd_4bit_send_command (2 , -> &U _lcd1 `*CS280 -> -> 1 `i `uc ]
-"25
-[; ;newmain.c: 25:     get_number_and_operartion(num1,&counter_num1,&lcd_counter,&operation);
+"23
+[; ;newmain.c: 23:     get_number_and_operartion(num1,&counter_num1,&lcd_counter,&operation);
 [e ( _get_number_and_operartion (4 , , , &U _num1 &U _counter_num1 &U _lcd_counter &U _operation ]
-"26
-[; ;newmain.c: 26:     convert_arr_to_float( num1,counter_num1,&num1_val);
+"24
+[; ;newmain.c: 24:     convert_arr_to_float( num1,counter_num1,&num1_val);
 [e ( _convert_arr_to_float (3 , , -> &U _num1 `*Cuc _counter_num1 &U _num1_val ]
-"27
-[; ;newmain.c: 27:      temp1 = num1_val;
-[e = _temp1 -> _num1_val `ui ]
-"28
-[; ;newmain.c: 28:     get_number_and_operartion(num2,&counter_num2,&lcd_counter,&operation2);
+"26
+[; ;newmain.c: 26:     get_number_and_operartion(num2,&counter_num2,&lcd_counter,&operation2);
 [e ( _get_number_and_operartion (4 , , , &U _num2 &U _counter_num2 &U _lcd_counter &U _operation2 ]
-"29
-[; ;newmain.c: 29:     convert_arr_to_float( num2,counter_num2,&num2_val);
+"27
+[; ;newmain.c: 27:     convert_arr_to_float( num2,counter_num2,&num2_val);
 [e ( _convert_arr_to_float (3 , , -> &U _num2 `*Cuc _counter_num2 &U _num2_val ]
 "30
-[; ;newmain.c: 30:     temp2 = num2_val;
-[e = _temp2 -> _num2_val `ui ]
-"32
-[; ;newmain.c: 32:     if(operation2 == '='){}
+[; ;newmain.c: 30:     if(operation2 == '='){}
 [e $ ! == -> _operation2 `ui -> 61 `ui 286  ]
 {
 }
 [e $U 287  ]
-"33
-[; ;newmain.c: 33:     else{
+"31
+[; ;newmain.c: 31:     else{
 [e :U 286 ]
 {
-"34
-[; ;newmain.c: 34:     get_third_number_and_third_operartion(num3,&counter_num3,&lcd_counter,&operation3);
+"32
+[; ;newmain.c: 32:     get_third_number_and_third_operartion(num3,&counter_num3,&lcd_counter,&operation3);
 [e ( _get_third_number_and_third_operartion (4 , , , &U _num3 &U _counter_num3 &U _lcd_counter &U _operation3 ]
-"35
-[; ;newmain.c: 35:     convert_arr_to_float( num3,counter_num3,&num3_val);
+"33
+[; ;newmain.c: 33:     convert_arr_to_float( num3,counter_num3,&num3_val);
 [e ( _convert_arr_to_float (3 , , -> &U _num3 `*Cuc _counter_num3 &U _num3_val ]
-"36
-[; ;newmain.c: 36:     }
+"34
+[; ;newmain.c: 34:     }
 }
 [e :U 287 ]
-"38
-[; ;newmain.c: 38:     if((operation2 == '*' || operation2 == '/') && (operation == '+' || operation == '-'))
+"36
+[; ;newmain.c: 36:     if((operation2 == '*' || operation2 == '/') && (operation == '+' || operation == '-'))
 [e $ ! && || == -> _operation2 `ui -> 42 `ui == -> _operation2 `ui -> 47 `ui || == -> _operation `ui -> 43 `ui == -> _operation `ui -> 45 `ui 288  ]
-"39
-[; ;newmain.c: 39:     {
+"37
+[; ;newmain.c: 37:     {
 {
-"40
-[; ;newmain.c: 40:        switch(operation2){
+"38
+[; ;newmain.c: 38:        switch(operation2){
 [e $U 290  ]
 {
-"41
-[; ;newmain.c: 41:            case '*': multiplication_operation(num2_val,num3_val,&result);break;
+"39
+[; ;newmain.c: 39:            case '*': multiplication_operation(num2_val,num3_val,&result);break;
 [e :U 291 ]
 [e ( _multiplication_operation (3 , , _num2_val _num3_val &U _result ]
 [e $U 289  ]
-"42
-[; ;newmain.c: 42:            case '/': Division_operation(num2_val,num3_val,&result);break;
+"40
+[; ;newmain.c: 40:            case '/': Division_operation(num2_val,num3_val,&result);break;
 [e :U 292 ]
 [e ( _Division_operation (3 , , _num2_val _num3_val &U _result ]
 [e $U 289  ]
-"43
-[; ;newmain.c: 43:        }
+"41
+[; ;newmain.c: 41:        }
 }
 [e $U 289  ]
 [e :U 290 ]
@@ -686,22 +662,22 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 47 `ui `i 292
  289 ]
 [e :U 289 ]
-"45
-[; ;newmain.c: 45:          switch(operation){
+"43
+[; ;newmain.c: 43:          switch(operation){
 [e $U 294  ]
 {
-"46
-[; ;newmain.c: 46:            case '+': sum_operation(num1_val,result,&total_result);break;
+"44
+[; ;newmain.c: 44:            case '+': sum_operation(num1_val,result,&total_result);break;
 [e :U 295 ]
 [e ( _sum_operation (3 , , _num1_val _result &U _total_result ]
 [e $U 293  ]
-"47
-[; ;newmain.c: 47:            case '-': subtraction_operation(num1_val,result,&total_result);break;
+"45
+[; ;newmain.c: 45:            case '-': subtraction_operation(num1_val,result,&total_result);break;
 [e :U 296 ]
 [e ( _subtraction_operation (3 , , _num1_val _result &U _total_result ]
 [e $U 293  ]
-"48
-[; ;newmain.c: 48:        }
+"46
+[; ;newmain.c: 46:        }
 }
 [e $U 293  ]
 [e :U 294 ]
@@ -709,33 +685,33 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 45 `ui `i 296
  293 ]
 [e :U 293 ]
-"50
-[; ;newmain.c: 50:        switch(operation3){
+"48
+[; ;newmain.c: 48:        switch(operation3){
 [e $U 298  ]
 {
-"51
-[; ;newmain.c: 51:            case '+': break;
+"49
+[; ;newmain.c: 49:            case '+': break;
 [e :U 299 ]
 [e $U 297  ]
-"52
-[; ;newmain.c: 52:            case '-': break;
+"50
+[; ;newmain.c: 50:            case '-': break;
 [e :U 300 ]
 [e $U 297  ]
-"53
-[; ;newmain.c: 53:            case '*': break;
+"51
+[; ;newmain.c: 51:            case '*': break;
 [e :U 301 ]
 [e $U 297  ]
-"54
-[; ;newmain.c: 54:            case '/': break;
+"52
+[; ;newmain.c: 52:            case '/': break;
 [e :U 302 ]
 [e $U 297  ]
-"55
-[; ;newmain.c: 55:            case '=': send_the_result_to_LCD(total_result);break;
+"53
+[; ;newmain.c: 53:            case '=': send_the_result_to_LCD(total_result);break;
 [e :U 303 ]
 [e ( _send_the_result_to_LCD (1 _total_result ]
 [e $U 297  ]
-"56
-[; ;newmain.c: 56:        }
+"54
+[; ;newmain.c: 54:        }
 }
 [e $U 297  ]
 [e :U 298 ]
@@ -746,45 +722,45 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 61 `ui `i 303
  297 ]
 [e :U 297 ]
-"57
-[; ;newmain.c: 57:     }
+"55
+[; ;newmain.c: 55:     }
 }
 [e $U 304  ]
-"58
-[; ;newmain.c: 58:     else{
+"56
+[; ;newmain.c: 56:     else{
 [e :U 288 ]
 {
-"59
-[; ;newmain.c: 59:         switch(operation){
+"57
+[; ;newmain.c: 57:         switch(operation){
 [e $U 306  ]
 {
-"60
-[; ;newmain.c: 60:            case '+': sum_operation(num1_val,num2_val,&result);break;
+"58
+[; ;newmain.c: 58:            case '+': sum_operation(num1_val,num2_val,&result);break;
 [e :U 307 ]
 [e ( _sum_operation (3 , , _num1_val _num2_val &U _result ]
 [e $U 305  ]
-"61
-[; ;newmain.c: 61:            case '-': subtraction_operation(num1_val,num2_val,&result);break;
+"59
+[; ;newmain.c: 59:            case '-': subtraction_operation(num1_val,num2_val,&result);break;
 [e :U 308 ]
 [e ( _subtraction_operation (3 , , _num1_val _num2_val &U _result ]
 [e $U 305  ]
-"62
-[; ;newmain.c: 62:            case '*': multiplication_operation(num1_val,num2_val,&result);break;
+"60
+[; ;newmain.c: 60:            case '*': multiplication_operation(num1_val,num2_val,&result);break;
 [e :U 309 ]
 [e ( _multiplication_operation (3 , , _num1_val _num2_val &U _result ]
 [e $U 305  ]
-"63
-[; ;newmain.c: 63:            case '/': Division_operation(num1_val,num2_val,&result);break;
+"61
+[; ;newmain.c: 61:            case '/': Division_operation(num1_val,num2_val,&result);break;
 [e :U 310 ]
 [e ( _Division_operation (3 , , _num1_val _num2_val &U _result ]
 [e $U 305  ]
-"64
-[; ;newmain.c: 64:            case '=': result = num1_val;break;
+"62
+[; ;newmain.c: 62:            case '=': result = num1_val;break;
 [e :U 311 ]
 [e = _result _num1_val ]
 [e $U 305  ]
-"65
-[; ;newmain.c: 65:        }
+"63
+[; ;newmain.c: 63:        }
 }
 [e $U 305  ]
 [e :U 306 ]
@@ -795,37 +771,37 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 61 `ui `i 311
  305 ]
 [e :U 305 ]
-"67
-[; ;newmain.c: 67:        switch(operation2){
+"65
+[; ;newmain.c: 65:        switch(operation2){
 [e $U 313  ]
 {
-"68
-[; ;newmain.c: 68:            case '+': sum_operation(result,num3_val,&total_result);break;
+"66
+[; ;newmain.c: 66:            case '+': sum_operation(result,num3_val,&total_result);break;
 [e :U 314 ]
 [e ( _sum_operation (3 , , _result _num3_val &U _total_result ]
 [e $U 312  ]
-"69
-[; ;newmain.c: 69:            case '-': subtraction_operation(result,num3_val,&total_result);break;
+"67
+[; ;newmain.c: 67:            case '-': subtraction_operation(result,num3_val,&total_result);break;
 [e :U 315 ]
 [e ( _subtraction_operation (3 , , _result _num3_val &U _total_result ]
 [e $U 312  ]
-"70
-[; ;newmain.c: 70:            case '*': multiplication_operation(result,num3_val,&total_result);break;
+"68
+[; ;newmain.c: 68:            case '*': multiplication_operation(result,num3_val,&total_result);break;
 [e :U 316 ]
 [e ( _multiplication_operation (3 , , _result _num3_val &U _total_result ]
 [e $U 312  ]
-"71
-[; ;newmain.c: 71:            case '/': Division_operation(result,num3_val,&total_result);break;
+"69
+[; ;newmain.c: 69:            case '/': Division_operation(result,num3_val,&total_result);break;
 [e :U 317 ]
 [e ( _Division_operation (3 , , _result _num3_val &U _total_result ]
 [e $U 312  ]
-"72
-[; ;newmain.c: 72:            case '=': send_the_result_to_LCD(result);break;
+"70
+[; ;newmain.c: 70:            case '=': send_the_result_to_LCD(result);break;
 [e :U 318 ]
 [e ( _send_the_result_to_LCD (1 _result ]
 [e $U 312  ]
-"73
-[; ;newmain.c: 73:        }
+"71
+[; ;newmain.c: 71:        }
 }
 [e $U 312  ]
 [e :U 313 ]
@@ -836,33 +812,33 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 61 `ui `i 318
  312 ]
 [e :U 312 ]
-"75
-[; ;newmain.c: 75:        switch(operation3){
+"73
+[; ;newmain.c: 73:        switch(operation3){
 [e $U 320  ]
 {
-"76
-[; ;newmain.c: 76:            case '+': ;break;
+"74
+[; ;newmain.c: 74:            case '+': ;break;
 [e :U 321 ]
 [e $U 319  ]
-"77
-[; ;newmain.c: 77:            case '-': ;break;
+"75
+[; ;newmain.c: 75:            case '-': ;break;
 [e :U 322 ]
 [e $U 319  ]
-"78
-[; ;newmain.c: 78:            case '*': ;break;
+"76
+[; ;newmain.c: 76:            case '*': ;break;
 [e :U 323 ]
 [e $U 319  ]
-"79
-[; ;newmain.c: 79:            case '/': ;break;
+"77
+[; ;newmain.c: 77:            case '/': ;break;
 [e :U 324 ]
 [e $U 319  ]
-"80
-[; ;newmain.c: 80:            case '=': send_the_result_to_LCD(total_result);break;
+"78
+[; ;newmain.c: 78:            case '=': send_the_result_to_LCD(total_result);break;
 [e :U 325 ]
 [e ( _send_the_result_to_LCD (1 _total_result ]
 [e $U 319  ]
-"81
-[; ;newmain.c: 81:        }
+"79
+[; ;newmain.c: 79:        }
 }
 [e $U 319  ]
 [e :U 320 ]
@@ -873,44 +849,41 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 61 `ui `i 325
  319 ]
 [e :U 319 ]
-"83
-[; ;newmain.c: 83:        temp_result = total_result;
-[e = _temp_result -> _total_result `ui ]
-"86
-[; ;newmain.c: 86:     }
+"84
+[; ;newmain.c: 84:     }
 }
 [e :U 304 ]
-"88
-[; ;newmain.c: 88:     _delay((unsigned long)((5000)*(8000000ul/4000.0)));
-[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"89
-[; ;newmain.c: 89:  lcd_4bit_send_command(&lcd1,0x01);
+"86
+[; ;newmain.c: 86:     _delay((unsigned long)((3000)*(8000000ul/4000.0)));
+[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"87
+[; ;newmain.c: 87:  lcd_4bit_send_command(&lcd1,0x01);
 [e ( _lcd_4bit_send_command (2 , -> &U _lcd1 `*CS280 -> -> 1 `i `uc ]
-"90
-[; ;newmain.c: 90:     }
+"88
+[; ;newmain.c: 88:     }
 }
 [e :U 283 ]
 [e $U 284  ]
 [e :U 285 ]
-"91
-[; ;newmain.c: 91:     return (0);
+"89
+[; ;newmain.c: 89:     return (0);
 [e ) -> 0 `i ]
 [e $UE 282  ]
-"92
-[; ;newmain.c: 92: }
+"90
+[; ;newmain.c: 90: }
 [e :UE 282 ]
 }
-"93
-[; ;newmain.c: 93: void Application_Initialization(void){
+"91
+[; ;newmain.c: 91: void Application_Initialization(void){
 [v _Application_Initialization `(v ~T0 @X0 1 ef ]
 {
 [e :U _Application_Initialization ]
 [f ]
-"95
-[; ;newmain.c: 95: ecu_layer_Initialization();
+"93
+[; ;newmain.c: 93: ecu_layer_Initialization();
 [e ( _ecu_layer_Initialization ..  ]
-"96
-[; ;newmain.c: 96: }
+"94
+[; ;newmain.c: 94: }
 [e :UE 326 ]
 }
 [a 1C 99 97 108 99 32 105 115 32 114 101 97 100 121 0 ]

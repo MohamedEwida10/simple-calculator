@@ -22,7 +22,7 @@ int main() {
                    
     get_number_and_operartion(num1,&counter_num1,&lcd_counter,&operation); //take first number and first operation 
     convert_arr_to_float( num1,counter_num1,&num1_val);
-   
+    
     get_number_and_operartion(num2,&counter_num2,&lcd_counter,&operation2);//take second number and second operation
     convert_arr_to_float( num2,counter_num2,&num2_val);
    
@@ -78,12 +78,12 @@ int main() {
            case '=': send_the_result_to_LCD(total_result);break; 
        }
        
-    
+       
 
        
     }
     
-    __delay_ms(5000);
+    __delay_ms(3000);
 	lcd_4bit_send_command(&lcd1,_LCD_CLEAR);
     }
     return (EXIT_SUCCESS);

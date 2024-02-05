@@ -202,17 +202,20 @@ void Division_operation( float32 num1_val, float32 num2_val,float32 *result){
  * @param lcd_counter : the counter which indicate the position of LCD cursor
  */
 void send_the_result_to_LCD(float32 result){
-float32 result_str[20];    
 if(result > (uint32)result){
+float32 result_str[20];     
 convert_float_to_string(result,result_str);
-}
-else{  
-convert_int_to_string((uint32)result,(uint32)result_str);
-}  
 lcd_4bit_send_command(&lcd1,_LCD_CURSER_OFF_DEPLAY_OFF);
 lcd_4bit_send_command(&lcd1,_LCD_CURSER_OFF_DEPLAY_ON);
 lcd_4bit_send_string_pos(&lcd1,3,1,result_str);
-
+}
+else{
+uint32 result_str[20]; 
+convert_int_to_string((uint32)result,result_str);
+lcd_4bit_send_command(&lcd1,_LCD_CURSER_OFF_DEPLAY_OFF);
+lcd_4bit_send_command(&lcd1,_LCD_CURSER_OFF_DEPLAY_ON);
+lcd_4bit_send_string_pos(&lcd1,3,1,result_str);
+}  
 }
 
 /**

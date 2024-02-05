@@ -5384,9 +5384,7 @@ void Application_Initialization(void);
 # 8 "newmain.c" 2
 
 
-uint32 temp1 = 0;
-uint32 temp2 = 0;
-uint32 temp_result = 0;
+
 int main() {
     Application_Initialization();
 
@@ -5401,10 +5399,10 @@ int main() {
 
     get_number_and_operartion(num1,&counter_num1,&lcd_counter,&operation);
     convert_arr_to_float( num1,counter_num1,&num1_val);
-     temp1 = num1_val;
+
     get_number_and_operartion(num2,&counter_num2,&lcd_counter,&operation2);
     convert_arr_to_float( num2,counter_num2,&num2_val);
-    temp2 = num2_val;
+
 
     if(operation2 == '='){}
     else{
@@ -5457,12 +5455,12 @@ int main() {
            case '=': send_the_result_to_LCD(total_result);break;
        }
 
-       temp_result = total_result;
+
 
 
     }
 
-    _delay((unsigned long)((5000)*(8000000ul/4000.0)));
+    _delay((unsigned long)((3000)*(8000000ul/4000.0)));
  lcd_4bit_send_command(&lcd1,0x01);
     }
     return (0);

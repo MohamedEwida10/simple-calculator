@@ -5454,17 +5454,20 @@ void Division_operation( float32 num1_val, float32 num2_val,float32 *result){
 
 
 void send_the_result_to_LCD(float32 result){
-float32 result_str[20];
 if(result > (uint32)result){
+float32 result_str[20];
 convert_float_to_string(result,result_str);
-}
-else{
-convert_int_to_string((uint32)result,(uint32)result_str);
-}
 lcd_4bit_send_command(&lcd1,0x08);
 lcd_4bit_send_command(&lcd1,0x0C);
 lcd_4bit_send_string_pos(&lcd1,3,1,result_str);
-
+}
+else{
+uint32 result_str[20];
+convert_int_to_string((uint32)result,result_str);
+lcd_4bit_send_command(&lcd1,0x08);
+lcd_4bit_send_command(&lcd1,0x0C);
+lcd_4bit_send_string_pos(&lcd1,3,1,result_str);
+}
 }
 
 

@@ -39,12 +39,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "121 C:\Program Files\Microchip\xc8\v2.45\pic\include\c99\stdio.h
 [; ;C:\Program Files\Microchip\xc8\v2.45\pic\include\c99\stdio.h: 121: int sprintf(char *restrict, const char *restrict, ...);
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"66 calculator_function/../ECU_layer/chr_LCD/ecu_chr_LCD.h
-[; ;calculator_function/../ECU_layer/chr_LCD/ecu_chr_LCD.h: 66: STD_ReturnType convert_int_to_string(uint32 value,uint8 *str);
-[v _convert_int_to_string `(uc ~T0 @X0 0 ef2`ui`*uc ]
-"47
+"47 calculator_function/../ECU_layer/chr_LCD/ecu_chr_LCD.h
 [; ;calculator_function/../ECU_layer/chr_LCD/ecu_chr_LCD.h: 47: STD_ReturnType lcd_4bit_send_command(const chr_lcd_4bit_t *lcd,uint8 command);
 [v _lcd_4bit_send_command `(uc ~T0 @X0 0 ef2`*CS275`uc ]
+"66
+[; ;calculator_function/../ECU_layer/chr_LCD/ecu_chr_LCD.h: 66: STD_ReturnType convert_int_to_string(uint32 value,uint8 *str);
+[v _convert_int_to_string `(uc ~T0 @X0 0 ef2`ui`*uc ]
 "54 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4620.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -1071,75 +1071,87 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _result `f ~T0 @X0 1 r1 ]
 [f ]
 "205
-[; ;calculator_function/calculator_functions.c: 205: float32 result_str[20];
-[v _result_str `f ~T0 @X0 -> 20 `i a ]
-"206
-[; ;calculator_function/calculator_functions.c: 206: if(result > (uint32)result){
+[; ;calculator_function/calculator_functions.c: 205: if(result > (uint32)result){
 [e $ ! > _result -> -> _result `ui `f 319  ]
 {
+"206
+[; ;calculator_function/calculator_functions.c: 206: float32 result_str[20];
+[v _result_str `f ~T0 @X0 -> 20 `i a ]
 "207
 [; ;calculator_function/calculator_functions.c: 207: convert_float_to_string(result,result_str);
 [e ( _convert_float_to_string (2 , _result -> &U _result_str `*uc ]
 "208
-[; ;calculator_function/calculator_functions.c: 208: }
-}
-[e $U 320  ]
+[; ;calculator_function/calculator_functions.c: 208: lcd_4bit_send_command(&lcd1,0x08);
+[e ( _lcd_4bit_send_command (2 , -> &U _lcd1 `*CS275 -> -> 8 `i `uc ]
 "209
-[; ;calculator_function/calculator_functions.c: 209: else{
-[e :U 319 ]
-{
+[; ;calculator_function/calculator_functions.c: 209: lcd_4bit_send_command(&lcd1,0x0C);
+[e ( _lcd_4bit_send_command (2 , -> &U _lcd1 `*CS275 -> -> 12 `i `uc ]
 "210
-[; ;calculator_function/calculator_functions.c: 210: convert_int_to_string((uint32)result,(uint32)result_str);
-[e ( _convert_int_to_string (2 , -> _result `ui -> -> &U _result_str `ui `*uc ]
+[; ;calculator_function/calculator_functions.c: 210: lcd_4bit_send_string_pos(&lcd1,3,1,result_str);
+[e ( _lcd_4bit_send_string_pos (4 , , , -> &U _lcd1 `*CS275 -> -> 3 `i `uc -> -> 1 `i `uc -> &U _result_str `*uc ]
 "211
 [; ;calculator_function/calculator_functions.c: 211: }
 }
-[e :U 320 ]
+[e $U 320  ]
 "212
-[; ;calculator_function/calculator_functions.c: 212: lcd_4bit_send_command(&lcd1,0x08);
-[e ( _lcd_4bit_send_command (2 , -> &U _lcd1 `*CS275 -> -> 8 `i `uc ]
+[; ;calculator_function/calculator_functions.c: 212: else{
+[e :U 319 ]
+{
 "213
-[; ;calculator_function/calculator_functions.c: 213: lcd_4bit_send_command(&lcd1,0x0C);
-[e ( _lcd_4bit_send_command (2 , -> &U _lcd1 `*CS275 -> -> 12 `i `uc ]
+[; ;calculator_function/calculator_functions.c: 213: uint32 result_str[20];
+[v _result_str `ui ~T0 @X0 -> 20 `i a ]
 "214
-[; ;calculator_function/calculator_functions.c: 214: lcd_4bit_send_string_pos(&lcd1,3,1,result_str);
-[e ( _lcd_4bit_send_string_pos (4 , , , -> &U _lcd1 `*CS275 -> -> 3 `i `uc -> -> 1 `i `uc -> &U _result_str `*uc ]
+[; ;calculator_function/calculator_functions.c: 214: convert_int_to_string((uint32)result,result_str);
+[e ( _convert_int_to_string (2 , -> _result `ui -> &U _result_str `*uc ]
+"215
+[; ;calculator_function/calculator_functions.c: 215: lcd_4bit_send_command(&lcd1,0x08);
+[e ( _lcd_4bit_send_command (2 , -> &U _lcd1 `*CS275 -> -> 8 `i `uc ]
 "216
-[; ;calculator_function/calculator_functions.c: 216: }
+[; ;calculator_function/calculator_functions.c: 216: lcd_4bit_send_command(&lcd1,0x0C);
+[e ( _lcd_4bit_send_command (2 , -> &U _lcd1 `*CS275 -> -> 12 `i `uc ]
+"217
+[; ;calculator_function/calculator_functions.c: 217: lcd_4bit_send_string_pos(&lcd1,3,1,result_str);
+[e ( _lcd_4bit_send_string_pos (4 , , , -> &U _lcd1 `*CS275 -> -> 3 `i `uc -> -> 1 `i `uc -> &U _result_str `*uc ]
+"218
+[; ;calculator_function/calculator_functions.c: 218: }
+}
+[e :U 320 ]
+"219
+[; ;calculator_function/calculator_functions.c: 219: }
 [e :UE 318 ]
 }
-"221
-[; ;calculator_function/calculator_functions.c: 221: void initialize_var(void){
+"224
+[; ;calculator_function/calculator_functions.c: 224: void initialize_var(void){
 [v _initialize_var `(v ~T0 @X0 1 ef ]
 {
 [e :U _initialize_var ]
 [f ]
-"222
-[; ;calculator_function/calculator_functions.c: 222:      keypad_value = 0;
-[e = _keypad_value -> -> 0 `i `uc ]
-"224
-[; ;calculator_function/calculator_functions.c: 224:      lcd_counter = 1;
-[e = _lcd_counter -> -> 1 `i `uc ]
 "225
-[; ;calculator_function/calculator_functions.c: 225:      counter_num1 = 0;
-[e = _counter_num1 -> -> 0 `i `uc ]
-"226
-[; ;calculator_function/calculator_functions.c: 226:      counter_num2 = 0;
-[e = _counter_num2 -> -> 0 `i `uc ]
+[; ;calculator_function/calculator_functions.c: 225:      keypad_value = 0;
+[e = _keypad_value -> -> 0 `i `uc ]
 "227
-[; ;calculator_function/calculator_functions.c: 227:      counter_num3 = 0;
-[e = _counter_num3 -> -> 0 `i `uc ]
+[; ;calculator_function/calculator_functions.c: 227:      lcd_counter = 1;
+[e = _lcd_counter -> -> 1 `i `uc ]
 "228
-[; ;calculator_function/calculator_functions.c: 228:      operation = 0;
-[e = _operation -> -> 0 `i `uc ]
+[; ;calculator_function/calculator_functions.c: 228:      counter_num1 = 0;
+[e = _counter_num1 -> -> 0 `i `uc ]
 "229
-[; ;calculator_function/calculator_functions.c: 229:      operation2 = 0;
-[e = _operation2 -> -> 0 `i `uc ]
+[; ;calculator_function/calculator_functions.c: 229:      counter_num2 = 0;
+[e = _counter_num2 -> -> 0 `i `uc ]
 "230
-[; ;calculator_function/calculator_functions.c: 230:      operation3 = 0;
-[e = _operation3 -> -> 0 `i `uc ]
+[; ;calculator_function/calculator_functions.c: 230:      counter_num3 = 0;
+[e = _counter_num3 -> -> 0 `i `uc ]
+"231
+[; ;calculator_function/calculator_functions.c: 231:      operation = 0;
+[e = _operation -> -> 0 `i `uc ]
 "232
-[; ;calculator_function/calculator_functions.c: 232:      for(int count = 0;count< 3;count++){
+[; ;calculator_function/calculator_functions.c: 232:      operation2 = 0;
+[e = _operation2 -> -> 0 `i `uc ]
+"233
+[; ;calculator_function/calculator_functions.c: 233:      operation3 = 0;
+[e = _operation3 -> -> 0 `i `uc ]
+"235
+[; ;calculator_function/calculator_functions.c: 235:      for(int count = 0;count< 3;count++){
 {
 [v _count `i ~T0 @X0 1 a ]
 [e = _count -> 0 `i ]
@@ -1147,39 +1159,39 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 323  ]
 [e :U 322 ]
 {
-"233
-[; ;calculator_function/calculator_functions.c: 233:      num1[count] = 0;
-[e = *U + &U _num1 * -> -> _count `ui `ux -> -> # *U &U _num1 `ui `ux -> -> 0 `i `uc ]
-"234
-[; ;calculator_function/calculator_functions.c: 234:      num2[count] = 0;
-[e = *U + &U _num2 * -> -> _count `ui `ux -> -> # *U &U _num2 `ui `ux -> -> 0 `i `uc ]
-"235
-[; ;calculator_function/calculator_functions.c: 235:      num3[count] = 0;
-[e = *U + &U _num3 * -> -> _count `ui `ux -> -> # *U &U _num3 `ui `ux -> -> 0 `i `uc ]
 "236
-[; ;calculator_function/calculator_functions.c: 236:      }
+[; ;calculator_function/calculator_functions.c: 236:      num1[count] = 0;
+[e = *U + &U _num1 * -> -> _count `ui `ux -> -> # *U &U _num1 `ui `ux -> -> 0 `i `uc ]
+"237
+[; ;calculator_function/calculator_functions.c: 237:      num2[count] = 0;
+[e = *U + &U _num2 * -> -> _count `ui `ux -> -> # *U &U _num2 `ui `ux -> -> 0 `i `uc ]
+"238
+[; ;calculator_function/calculator_functions.c: 238:      num3[count] = 0;
+[e = *U + &U _num3 * -> -> _count `ui `ux -> -> # *U &U _num3 `ui `ux -> -> 0 `i `uc ]
+"239
+[; ;calculator_function/calculator_functions.c: 239:      }
 }
 [e ++ _count -> 1 `i ]
 [e $ < _count -> 3 `i 322  ]
 [e :U 323 ]
 }
-"238
-[; ;calculator_function/calculator_functions.c: 238:      num1_val = 0;
+"241
+[; ;calculator_function/calculator_functions.c: 241:      num1_val = 0;
 [e = _num1_val -> -> 0 `i `f ]
-"239
-[; ;calculator_function/calculator_functions.c: 239:      num2_val = 0;
-[e = _num2_val -> -> 0 `i `f ]
-"240
-[; ;calculator_function/calculator_functions.c: 240:      num3_val = 0;
-[e = _num3_val -> -> 0 `i `f ]
 "242
-[; ;calculator_function/calculator_functions.c: 242:      result = 0;
-[e = _result -> -> 0 `i `f ]
+[; ;calculator_function/calculator_functions.c: 242:      num2_val = 0;
+[e = _num2_val -> -> 0 `i `f ]
 "243
-[; ;calculator_function/calculator_functions.c: 243:      total_result = 0;
+[; ;calculator_function/calculator_functions.c: 243:      num3_val = 0;
+[e = _num3_val -> -> 0 `i `f ]
+"245
+[; ;calculator_function/calculator_functions.c: 245:      result = 0;
+[e = _result -> -> 0 `i `f ]
+"246
+[; ;calculator_function/calculator_functions.c: 246:      total_result = 0;
 [e = _total_result -> -> 0 `i `f ]
-"244
-[; ;calculator_function/calculator_functions.c: 244: }
+"247
+[; ;calculator_function/calculator_functions.c: 247: }
 [e :UE 321 ]
 }
 [p f _sprintf 8462336 ]
