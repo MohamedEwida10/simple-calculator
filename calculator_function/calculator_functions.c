@@ -5,7 +5,7 @@
  * Created on February 4, 2024, 8:14 PM
  */
 
-#include "../../simple calculator/calculator_functions.h"
+#include "calculator_functions.h"
 
 /**
  * @brief getting the number in array and the operation 
@@ -32,24 +32,36 @@ uint8 keypad_value  = 0;
                
         }
         else{    // store the operation and send it to the LCD 
-            if(keypad_value == '+'||keypad_value == '-'||keypad_value == '*'||keypad_value == '/'||keypad_value == '='){
+            if((keypad_value == '+'||keypad_value == '-'||keypad_value == '*'||keypad_value == '/'||keypad_value == '=')){
+                if(num[0] == 0){ // to avoid get the operation without number
+                lcd_4bit_send_string_pos(&lcd1,4,1,"syntax error !");
+                __delay_ms(500);
+                lcd_4bit_send_string_pos(&lcd1,4,1,"                  "); 
+                __delay_ms(500);        
+                }
+                else{ // get operation
                 *operation = keypad_value; 
                 lcd_4bit_send_char_data_pos(&lcd1,1,*lcd_counter,keypad_value);
                 (*lcd_counter)++;
-                break;
-            }           
-            if((*counter_num) < 4){ // make sure that maxmum digits of the number array is 4  
-                    num[*counter_num] = keypad_value; 
-                    lcd_4bit_send_char_data_pos(&lcd1,1,*lcd_counter,keypad_value);
-                    (*lcd_counter)++;    
-                    (*counter_num)++;    
+                break;   
                 }
-            else{  // hint message
-                lcd_4bit_send_string_pos(&lcd1,4,1,"hint:max 4 digits");
-                __delay_ms(500);
-                lcd_4bit_send_string_pos(&lcd1,4,1,"                  "); 
-                __delay_ms(500);    
+                
             }
+            else{
+                if((*counter_num) < 4){ // make sure that maxmum digits of the number array is 4  
+                        num[*counter_num] = keypad_value; 
+                        lcd_4bit_send_char_data_pos(&lcd1,1,*lcd_counter,keypad_value);
+                        (*lcd_counter)++;    
+                        (*counter_num)++;    
+                    }
+                else{  // hint message
+                    lcd_4bit_send_string_pos(&lcd1,4,1,"hint:max 4 digits");
+                    __delay_ms(500);
+                    lcd_4bit_send_string_pos(&lcd1,4,1,"                  "); 
+                    __delay_ms(500);    
+                }
+            }
+            
         }
            
 
@@ -76,10 +88,19 @@ uint8 keypad_value  = 0;
         }
         else{    // store the operation and send it to the LCD 
             if(keypad_value == '+'||keypad_value == '-'||keypad_value == '*'||keypad_value == '/'){ // hint message
+                if(num[0] == 0){ // to avoid get the operation without number
+                lcd_4bit_send_string_pos(&lcd1,4,1,"syntax error !");
+                __delay_ms(500);
+                lcd_4bit_send_string_pos(&lcd1,4,1,"                  "); 
+                __delay_ms(500);        
+                }
+                else{ 
                 lcd_4bit_send_string_pos(&lcd1,4,1,"hint:max 2 operation!!");
                  __delay_ms(500);
                  lcd_4bit_send_string_pos(&lcd1,4,1,"                           "); 
-                 __delay_ms(500);
+                 __delay_ms(500); 
+                }
+
             }     
             else if(keypad_value == '='){ //  getting the '='  
                 *operation = keypad_value; 

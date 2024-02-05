@@ -9,8 +9,8 @@
 #define	CALCULATOR_FUNCTIONS_H
 
 /******************* Section : Includes *******************/
-#include "../simple calculator/ECU_layer/Keypad/ecu_keypad.h"
-#include "../simple calculator/ECU_layer/chr_LCD/ecu_chr_LCD.h"
+#include "../ECU_layer/Keypad/ecu_keypad.h"
+#include "../ECU_layer/chr_LCD/ecu_chr_LCD.h"
 
 /******************* Section : Macro Declarations *******************/
     uint8 keypad_value  = 0;

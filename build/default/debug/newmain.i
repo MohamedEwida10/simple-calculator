@@ -5335,8 +5335,8 @@ STD_ReturnType convert_int_to_string(uint32 value,uint8 *str);
 void ecu_layer_Initialization(void);
 # 13 "./newmain.h" 2
 
-# 1 "./calculator_functions.h" 1
-# 16 "./calculator_functions.h"
+# 1 "./calculator_function/calculator_functions.h" 1
+# 16 "./calculator_function/calculator_functions.h"
     uint8 keypad_value = 0;
 
     uint8 lcd_counter = 1;
@@ -5360,7 +5360,7 @@ void ecu_layer_Initialization(void);
 
     extern chr_lcd_4bit_t lcd1;
     extern keypad_t keypad;
-# 47 "./calculator_functions.h"
+# 47 "./calculator_function/calculator_functions.h"
 void get_number_and_operartion(uint8 *num,uint8 *counter_num,uint8 *lcd_counter,
                                uint8 *operation);
 void get_third_number_and_third_operartion(uint8 *num,uint8 *counter_num,uint8 *lcd_counter,

@@ -14,15 +14,15 @@
 
 
 
-# 1 "calculator_function/../../simple calculator/calculator_functions.h" 1
-# 12 "calculator_function/../../simple calculator/calculator_functions.h"
-# 1 "./../simple calculator/ECU_layer/Keypad/ecu_keypad.h" 1
-# 12 "./../simple calculator/ECU_layer/Keypad/ecu_keypad.h"
-# 1 "./../simple calculator/ECU_layer/Keypad/ecu_ketpad_cfg.h" 1
-# 12 "./../simple calculator/ECU_layer/Keypad/ecu_keypad.h" 2
+# 1 "calculator_function/calculator_functions.h" 1
+# 12 "calculator_function/calculator_functions.h"
+# 1 "calculator_function/../ECU_layer/Keypad/ecu_keypad.h" 1
+# 12 "calculator_function/../ECU_layer/Keypad/ecu_keypad.h"
+# 1 "calculator_function/../ECU_layer/Keypad/ecu_ketpad_cfg.h" 1
+# 12 "calculator_function/../ECU_layer/Keypad/ecu_keypad.h" 2
 
-# 1 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h" 1
-# 12 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h"
+# 1 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h" 1
+# 12 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\proc\\pic18f4620.h" 1 3
 # 44 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\proc\\pic18f4620.h" 3
 # 1 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\__at.h" 1 3
@@ -4235,12 +4235,12 @@ extern volatile __bit nWR __attribute__((address(0x7C21)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 12 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h" 2
+# 12 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h" 2
 
-# 1 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../mcal_std_types.h" 1
-# 13 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../mcal_std_types.h"
-# 1 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../std_libraries.h" 1
-# 14 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../std_libraries.h"
+# 1 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../mcal_std_types.h" 1
+# 13 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../mcal_std_types.h"
+# 1 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../std_libraries.h" 1
+# 14 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../std_libraries.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\stdio.h" 1 3
 
 
@@ -4411,7 +4411,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 14 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../std_libraries.h" 2
+# 14 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../std_libraries.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\stdlib.h" 1 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\stdlib.h" 3
@@ -4490,7 +4490,7 @@ typedef struct { unsigned int quot, rem; } udiv_t;
 typedef struct { unsigned long quot, rem; } uldiv_t;
 udiv_t udiv (unsigned int, unsigned int);
 uldiv_t uldiv (unsigned long, unsigned long);
-# 15 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../std_libraries.h" 2
+# 15 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../std_libraries.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\math.h" 1 3
 # 10 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\math.h" 3
@@ -4953,11 +4953,11 @@ double jn(int, double);
 double y0(double);
 double y1(double);
 double yn(int, double);
-# 16 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../std_libraries.h" 2
-# 13 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../mcal_std_types.h" 2
+# 16 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../std_libraries.h" 2
+# 13 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../mcal_std_types.h" 2
 
-# 1 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../compiler.h" 1
-# 12 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../compiler.h"
+# 1 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../compiler.h" 1
+# 12 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../compiler.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5034,8 +5034,8 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\\pic\\include\\xc.h" 2 3
-# 12 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../compiler.h" 2
-# 14 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../mcal_std_types.h" 2
+# 12 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../compiler.h" 2
+# 14 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../mcal_std_types.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files\\Microchip\\xc8\\v2.45\\pic\\include\\c99\\string.h" 3
@@ -5094,7 +5094,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 15 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../mcal_std_types.h" 2
+# 15 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../mcal_std_types.h" 2
 
 
 typedef unsigned char uint8;
@@ -5106,14 +5106,14 @@ typedef signed int sint32;
 typedef float float32;
 
 typedef uint8 STD_ReturnType;
-# 13 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h" 2
+# 13 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h" 2
 
-# 1 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/../device_config.h" 1
-# 14 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h" 2
+# 1 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/../device_config.h" 1
+# 14 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h" 2
 
-# 1 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio_cfg.h" 1
-# 15 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h" 2
-# 36 "./../simple calculator/ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h"
+# 1 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio_cfg.h" 1
+# 15 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h" 2
+# 36 "calculator_function/../ECU_layer/Keypad/../../MCAL_layer/GPIO/hal_gpio.h"
 typedef enum {
     LOW = 0,
     HIGH
@@ -5163,7 +5163,7 @@ STD_ReturnType gpio_port_get_direction_status( port_index_t port, uint8 *directi
 STD_ReturnType gpio_port_write_logic( port_index_t port, uint8 logic);
 STD_ReturnType gpio_port_read_logic( port_index_t port, uint8 *logic);
 STD_ReturnType gpio_port_toggle_logic( port_index_t port);
-# 13 "./../simple calculator/ECU_layer/Keypad/ecu_keypad.h" 2
+# 13 "calculator_function/../ECU_layer/Keypad/ecu_keypad.h" 2
 
 
 
@@ -5179,13 +5179,13 @@ typedef struct{
 
 STD_ReturnType ecu_keypad_initialize(const keypad_t *keypad);
 STD_ReturnType ecu_keypad_get_value(const keypad_t *keypad, uint8 *value);
-# 12 "calculator_function/../../simple calculator/calculator_functions.h" 2
+# 12 "calculator_function/calculator_functions.h" 2
 
-# 1 "./../simple calculator/ECU_layer/chr_LCD/ecu_chr_LCD.h" 1
-# 12 "./../simple calculator/ECU_layer/chr_LCD/ecu_chr_LCD.h"
-# 1 "./../simple calculator/ECU_layer/chr_LCD/ecu_chr_LCD_cfg.h" 1
-# 12 "./../simple calculator/ECU_layer/chr_LCD/ecu_chr_LCD.h" 2
-# 34 "./../simple calculator/ECU_layer/chr_LCD/ecu_chr_LCD.h"
+# 1 "calculator_function/../ECU_layer/chr_LCD/ecu_chr_LCD.h" 1
+# 12 "calculator_function/../ECU_layer/chr_LCD/ecu_chr_LCD.h"
+# 1 "calculator_function/../ECU_layer/chr_LCD/ecu_chr_LCD_cfg.h" 1
+# 12 "calculator_function/../ECU_layer/chr_LCD/ecu_chr_LCD.h" 2
+# 34 "calculator_function/../ECU_layer/chr_LCD/ecu_chr_LCD.h"
 typedef struct{
 pin_config_t rs;
 pin_config_t en;
@@ -5219,7 +5219,7 @@ STD_ReturnType lcd_8bit_send_custome_char(const chr_lcd_8bit_t *lcd,uint8 row,ui
 STD_ReturnType convert_byte_to_string(uint8 value,uint8 *str);
 STD_ReturnType convert_short_to_string(uint16 value,uint8 *str);
 STD_ReturnType convert_int_to_string(uint32 value,uint8 *str);
-# 13 "calculator_function/../../simple calculator/calculator_functions.h" 2
+# 13 "calculator_function/calculator_functions.h" 2
 
 
 
@@ -5246,7 +5246,7 @@ STD_ReturnType convert_int_to_string(uint32 value,uint8 *str);
 
     extern chr_lcd_4bit_t lcd1;
     extern keypad_t keypad;
-# 47 "calculator_function/../../simple calculator/calculator_functions.h"
+# 47 "calculator_function/calculator_functions.h"
 void get_number_and_operartion(uint8 *num,uint8 *counter_num,uint8 *lcd_counter,
                                uint8 *operation);
 void get_third_number_and_third_operartion(uint8 *num,uint8 *counter_num,uint8 *lcd_counter,
@@ -5284,24 +5284,36 @@ uint8 keypad_value = 0;
 
         }
         else{
-            if(keypad_value == '+'||keypad_value == '-'||keypad_value == '*'||keypad_value == '/'||keypad_value == '='){
+            if((keypad_value == '+'||keypad_value == '-'||keypad_value == '*'||keypad_value == '/'||keypad_value == '=')){
+                if(num[0] == 0){
+                lcd_4bit_send_string_pos(&lcd1,4,1,"syntax error !");
+                _delay((unsigned long)((500)*(8000000ul/4000.0)));
+                lcd_4bit_send_string_pos(&lcd1,4,1,"                  ");
+                _delay((unsigned long)((500)*(8000000ul/4000.0)));
+                }
+                else{
                 *operation = keypad_value;
                 lcd_4bit_send_char_data_pos(&lcd1,1,*lcd_counter,keypad_value);
                 (*lcd_counter)++;
                 break;
-            }
-            if((*counter_num) < 4){
-                    num[*counter_num] = keypad_value;
-                    lcd_4bit_send_char_data_pos(&lcd1,1,*lcd_counter,keypad_value);
-                    (*lcd_counter)++;
-                    (*counter_num)++;
                 }
-            else{
-                lcd_4bit_send_string_pos(&lcd1,4,1,"hint:max 4 digits");
-                _delay((unsigned long)((500)*(8000000ul/4000.0)));
-                lcd_4bit_send_string_pos(&lcd1,4,1,"                  ");
-                _delay((unsigned long)((500)*(8000000ul/4000.0)));
+
             }
+            else{
+                if((*counter_num) < 4){
+                        num[*counter_num] = keypad_value;
+                        lcd_4bit_send_char_data_pos(&lcd1,1,*lcd_counter,keypad_value);
+                        (*lcd_counter)++;
+                        (*counter_num)++;
+                    }
+                else{
+                    lcd_4bit_send_string_pos(&lcd1,4,1,"hint:max 4 digits");
+                    _delay((unsigned long)((500)*(8000000ul/4000.0)));
+                    lcd_4bit_send_string_pos(&lcd1,4,1,"                  ");
+                    _delay((unsigned long)((500)*(8000000ul/4000.0)));
+                }
+            }
+
         }
 
 
@@ -5328,10 +5340,19 @@ uint8 keypad_value = 0;
         }
         else{
             if(keypad_value == '+'||keypad_value == '-'||keypad_value == '*'||keypad_value == '/'){
+                if(num[0] == 0){
+                lcd_4bit_send_string_pos(&lcd1,4,1,"syntax error !");
+                _delay((unsigned long)((500)*(8000000ul/4000.0)));
+                lcd_4bit_send_string_pos(&lcd1,4,1,"                  ");
+                _delay((unsigned long)((500)*(8000000ul/4000.0)));
+                }
+                else{
                 lcd_4bit_send_string_pos(&lcd1,4,1,"hint:max 2 operation!!");
                  _delay((unsigned long)((500)*(8000000ul/4000.0)));
                  lcd_4bit_send_string_pos(&lcd1,4,1,"                           ");
                  _delay((unsigned long)((500)*(8000000ul/4000.0)));
+                }
+
             }
             else if(keypad_value == '='){
                 *operation = keypad_value;

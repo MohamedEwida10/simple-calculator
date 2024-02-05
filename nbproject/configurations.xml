@@ -7,7 +7,7 @@
       <logicalFolder name="calculator_function"
                      displayName="calculator_function"
                      projectFiles="true">
-        <itemPath>calculator_functions.h</itemPath>
+        <itemPath>calculator_function/calculator_functions.h</itemPath>
       </logicalFolder>
       <logicalFolder name="ECU_layer" displayName="ECU_layer" projectFiles="true">
         <logicalFolder name="7_segment" displayName="7_segment" projectFiles="true">

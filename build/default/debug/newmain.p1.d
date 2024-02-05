@@ -22,4 +22,4 @@ ECU_layer/Keypad/ecu_keypad.h  \
 ECU_layer/Keypad/ecu_ketpad_cfg.h  \
 ECU_layer/chr_LCD/ecu_chr_LCD.h  \
 ECU_layer/chr_LCD/ecu_chr_LCD_cfg.h  \
-calculator_functions.h 
+calculator_function/calculator_functions.h 
